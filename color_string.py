@@ -24,5 +24,5 @@ BG_COLOR=\
 
 RESET = "\033[0m"
 
-def colorize_str(string, fg=FG_COLOR["white"]):
-    return FG_COLOR[fg] + string + RESET
+def colorize_str(string, fg="white", bg="black"):
+    return FG_COLOR[fg] + BG_COLOR[bg] + string + RESET
