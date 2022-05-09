@@ -7,7 +7,8 @@ FG_COLOR=\
     "blue" : "\033[34m",
     "magenta" : "\033[35m",
     "cyan" : "\033[36m",
-    "white" : "\033[37m"
+    "white" : "\033[37m",
+    "none" : ""
 }
 
 BG_COLOR=\
@@ -19,10 +20,11 @@ BG_COLOR=\
     "blue" : "\033[44m",
     "magenta" : "\033[45m",
     "cyan" : "\033[46m",
-    "white" : "\033[47m"
+    "white" : "\033[47m",
+    "none" : ""
 }
 
 RESET = "\033[0m"
 
-def colorize_str(string, fg="white", bg="black"):
+def colorize_str(string, fg="none", bg="none"):
     return FG_COLOR[fg] + BG_COLOR[bg] + string + RESET
